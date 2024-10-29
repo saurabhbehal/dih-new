@@ -1,0 +1,47 @@
+// change description for all
+export const pagesData = [
+  // {
+  //   id: 0,
+  //   name: 'Types of Wardrobes',
+  //   slug: 'types-of-wardrobes',
+  //   noItems: '2047',
+  //   heading: 'Types of Wardrobes',
+  //   desc: ' Get a Top Quality, functional, Affordable & Well Lit Modular Kitchen, using the Top Notch fittings. We Design from a basic simple modular kitchen to an exclusive luxury modular kitchen which perfects for convenience and aesthetics. All Our Modular Kitchens are budget friendly, and we assure you 100% guaranteed quotes across Delhi NCR, we have claimed for the past 9 years, that you bring us any Quote and we offer you Flat 7% off. We design your Modular Kitchen exactly as per bespoke requirements, in all shapes like L shape, G, U shape, Island kitchen, Open kitchen etc with distinctive types of finishes in acrylic, membrane, designer laminates, lacquer glass and veneer shutter. Check out some of the coolest kitchen designs we have with us.',
+  // },
+  {
+    id: 0,
+    name: 'Luxury Wardrobes',
+    slug: 'luxury-wardrobes-designs',
+    noItems: '2874',
+    heading: 'Luxury Wardrobes',
+    desc: 'Now there are wardrobes which are used by the masses, then there are elite segment wardrobes which are called bespoke wardrobe, these are custom made, custom designed, floor to ceiling, inline wardrobes, Leathered, caned, piped, fluted and many other types of wardrobes which we manufacture in-house and are specifically made for our exclusive clientage. We have delivered works in some of the finest places across Delhi - NCR. We believe in delivering affordable Luxury, hence we have most of our models which are quite affordable and can be procured in any type of Budget. Just check the quality of the materials beforehand and see the difference.',
+    items: [],
+  },
+  {
+    id: 1,
+    name: 'Wardrobe Designs',
+    slug: 'wardrobe-designs',
+    noItems: '1816',
+    heading: 'Wardrobe Designs',
+    desc: 'We make your wardrobes look good, just as you dress up to look up, we are your Wardrobe’s Makeover Specialist. All Our Wardrobes are very affordable and we have more than 1000+ wardrobe designs to showcase, book a site visit with us and see the design magic, and we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. Check out our designs for best Wardrobe Ideas and Inspirations.',
+    items: [],
+  },
+  {
+    id: 2,
+    name: 'Lacquer Glass Wardrobe Designs',
+    slug: 'lacquer-glass-wardrobe-designs',
+    noItems: '162',
+    heading: 'Lacquer Glass Wardrobe Designs',
+    desc: 'When you really deserve a perfect partition, you must get one. Now get Beautiful Glass Partitions for your interiors to deck up your spaces. Delight yourself in our products, All Our Glass Partitions are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like slim profiled, zed profiled, cube profile and lacquered. Check out our designs for some of the top ideas for your Glass Partitions.',
+    items: [],
+  },
+  {
+    id: 3,
+    name: 'Wardrobe Renovations Services',
+    slug: 'wardrobe-renovations-services',
+    noItems: '809',
+    heading: 'Wardrobe Renovations Services',
+    desc: 'A Wardrobe should be Good Looking, for you to look good. Now Get your Wardrobe Renovated from an obsolete design to a trendy flamboyant design, yet very affordable with proper storage planning by Our Brand Design Indian Homes. With the proper material specification and Fittings, we assure you a Masterpiece. Check out some of our delivered designs & Book with us today for Thousands of more options for renovating your Wardrobe.',
+    items: [],
+  },
+]

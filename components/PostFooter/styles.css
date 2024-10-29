@@ -1,0 +1,542 @@
+
+section.handshake {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    overflow: hidden;
+  }
+  section.handshake svg {
+    position: absolute;
+    width: 50%;
+    z-index: -1;
+  }
+  
+  .handshake img,
+  svg {
+    vertical-align: middle;
+  }
+  .handshake path {
+    fill: #fff;
+    stroke: #000;
+    stroke-dasharray: 8000;
+    stroke-width: 3;
+    animation: my_animation 6s infinite;
+  }
+  section.handshake h3 {
+    font-size: 3rem;
+    font-weight: 100;
+  }
+  
+  section.Form-block {
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+  }
+  .container {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .section-header {
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 50px;
+    border-top: 2px solid #f5f5f5;
+  }
+  @media screen and (max-width: 767px) {
+    .section-header {
+      padding-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .section-header p {
+      line-height: 1.2;
+      font-size: 5rem !important;
+      font-family: 'Poppins';
+      font-weight: 400 !important;
+    }
+  }
+  .section-header h2 {
+    font-size: 60px !important;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    position: relative;
+    color: #000 !important;
+  }
+  
+  .section-header p {
+    line-height: 20px;
+    color: #000;
+    letter-spacing: 0.02em;
+    text-transform: capitalize !important;
+  }
+  
+  .section-header p {
+    margin-bottom: 0;
+    color: #000;
+    font-size: 2.5rem !important;
+    line-height: 1.6;
+  }
+  .section-header p,
+  .section-header p span {
+    margin: 0;
+  
+    font-weight: 400;
+  }
+  /* Adjustments for form-part on small screens */
+  @media screen and (max-width: 600px) {
+    .form-part {
+      padding: 0.5rem; /* Adjust this value as needed */
+      padding-top: 0;
+    }
+  }
+  
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .project-overlay {
+    border-bottom: 0.1rem solid black;
+  }
+  
+  .townImage {
+    width: 100% !important;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .townImage .clouds {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .townImage .clouds .cloud1 {
+    width: 10.352%;
+    height: auto;
+    -webkit-animation-name: cloudA;
+    animation-name: cloudA;
+  }
+  
+  .townImage .clouds img {
+    position: absolute;
+    -ms-transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    -webkit-animation-duration: 420s;
+    animation-duration: 420s;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+  }
+  
+  .townImage .clouds .cloud1 {
+    width: 10.352%;
+    height: auto;
+    -webkit-animation-name: cloudA;
+    animation-name: cloudA;
+  }
+  
+  .townImage .clouds .cloud2 {
+    width: 7.041%;
+    height: auto;
+    -webkit-animation-name: cloudB;
+    animation-name: cloudB;
+  }
+  .townImage .clouds .cloud3 {
+    width: 10.352%;
+    width: 7.041%;
+    height: auto;
+    -webkit-animation-name: cloudC;
+    animation-name: cloudC;
+  }
+  .townImage .clouds .cloudCloud {
+    width: 9.301%;
+    width: 7.041%;
+    height: auto;
+    -webkit-animation-name: cloudCloud;
+    animation-name: cloudCloud;
+  }
+  .townImage .clouds .squiggle1 {
+    width: 3.258%;
+    height: auto;
+    -webkit-animation-name: squiggleA;
+    animation-name: squiggleA;
+  }
+  
+  .townImage .clouds .squiggle2 {
+    width: 3.258%;
+    height: auto;
+    -webkit-animation-name: squiggleB;
+    animation-name: squiggleB;
+  }
+  
+  .townImage .balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 20;
+  }
+  .townImage .townImageImg {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0.75vw;
+  }
+  .townImage .balloons .balloonCloud {
+    width: 10.247%;
+    height: auto;
+    position: absolute;
+    animation-name: balloonCloud;
+    animation-duration: 240s;
+    animation-iteration-count: infinite;
+    z-index: 55;
+  }
+  .townImage .balloons .smallBalloon {
+    width: 2.522%;
+    height: auto;
+    -webkit-animation-name: smallBalloon;
+    animation-name: smallBalloon;
+    -webkit-animation-duration: 300s;
+    animation-duration: 300s;
+  }
+  
+  .townImage .townImageImg {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0.75vw;
+  }
+  
+  .townImage .vehicles .bus {
+    width: 9.563%;
+    height: auto;
+    position: absolute;
+    animation-name: bus;
+    animation-duration: 45s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 40;
+  }
+  .townImage .vehicles .car {
+    width: 7.987%;
+    height: auto;
+    position: absolute;
+    animation-name: car;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 39;
+  }
+  @keyframes cloudA {
+    0% {
+      right: 36%;
+      top: 19%;
+    }
+    36% {
+      right: -5%;
+      top: 15%;
+    }
+    36.001% {
+      right: 105%;
+      top: 15%;
+    }
+    100% {
+      right: 36%;
+      top: 19%;
+    }
+  }
+  @keyframes my_animation {
+    0% {
+      stroke-dashoffset: 0;
+    }
+  
+    70% {
+      stroke-dashoffset: 8000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes cloudB {
+    0% {
+      right: 51%;
+      top: 39%;
+    }
+  
+    51% {
+      right: -5%;
+      top: 34%;
+    }
+    51.001% {
+      right: 105%;
+      top: 34%;
+    }
+    100% {
+      right: 51%;
+      top: 39%;
+    }
+  }
+  @keyframes cloudCloud {
+    0% {
+      right: 9%;
+      top: 25%;
+    }
+  
+    9% {
+      right: -5%;
+      top: 21%;
+    }
+    9.001% {
+      right: 105%;
+      top: 21%;
+    }
+    100% {
+      right: 9%;
+      top: 25%;
+    }
+  }
+  @keyframes cloudC {
+    0% {
+      right: 77%;
+      top: 20%;
+    }
+  
+    77% {
+      right: -5%;
+      top: 16%;
+    }
+    77.001% {
+      right: 105%;
+      top: 16%;
+    }
+    100% {
+      right: 77%;
+      top: 20%;
+    }
+  }
+  @keyframes squiggleA {
+    0% {
+      right: 22%;
+      top: 22%;
+    }
+  
+    22% {
+      right: -5%;
+      top: 18%;
+    }
+    22.001% {
+      right: 105%;
+      top: 18%;
+    }
+    100% {
+      right: 22%;
+      top: 22%;
+    }
+  }
+  @keyframes squiggleB {
+    0% {
+      right: 88%;
+      top: 40%;
+    }
+  
+    88% {
+      right: -5%;
+      top: 36%;
+    }
+    88.001% {
+      right: 105%;
+      top: 36%;
+    }
+    100% {
+      right: 88%;
+      top: 40%;
+    }
+  }
+  @keyframes balloonCloud {
+    0% {
+      right: -5%;
+      top: 0%;
+    }
+    22.5% {
+      right: 105%;
+      top: 0%;
+    }
+    45% {
+      right: -5%;
+      top: 0%;
+    }
+    45.001% {
+      right: 105%;
+      top: 0%;
+    }
+    77.5% {
+      right: -5%;
+      top: 0%;
+    }
+    100% {
+      right: 105%;
+      top: 0%;
+    }
+  }
+  @keyframes smallBalloon {
+    0% {
+      right: 56%;
+      top: 15%;
+    }
+    25% {
+      top: 25%;
+    }
+    56% {
+      right: -5%;
+      top: 15%;
+    }
+    56.001% {
+      right: 105%;
+      top: 15%;
+    }
+    76% {
+      top: 25%;
+    }
+    100% {
+      right: 56%;
+      top: 15%;
+    }
+  }
+  
+  @keyframes bus {
+    0% {
+      left: -5%;
+      bottom: 0;
+    }
+    20% {
+      bottom: 0;
+    }
+    21% {
+      bottom: 1%;
+    }
+    22% {
+      bottom: 0;
+    }
+    40% {
+      bottom: 0;
+    }
+    41% {
+      bottom: 1%;
+    }
+    42% {
+      bottom: 0;
+    }
+    60% {
+      bottom: 0;
+    }
+    61% {
+      bottom: 1%;
+    }
+    62% {
+      bottom: 0;
+    }
+    70% {
+      left: 105%;
+      bottom: 0;
+    }
+    70.001% {
+      left: -5%;
+      bottom: 0;
+    }
+    80% {
+      bottom: 0;
+    }
+    81% {
+      bottom: 1%;
+    }
+  
+    82% {
+      bottom: 0;
+    }
+    100% {
+      left: -5%;
+      bottom: 0;
+    }
+  }
+  @keyframes car {
+    0% {
+      right: -5%;
+      bottom: 3%;
+    }
+    20% {
+      bottom: 3%;
+    }
+    21% {
+      bottom: 4%;
+    }
+    22% {
+      bottom: 3%;
+    }
+    40% {
+      bottom: 3%;
+    }
+    41% {
+      bottom: 4%;
+    }
+    42% {
+      bottom: 3%;
+    }
+    60% {
+      bottom: 3%;
+    }
+    61% {
+      bottom: 4%;
+    }
+    62% {
+      bottom: 3%;
+    }
+    64% {
+      right: 105%;
+      bottom: 3%;
+    }
+    64.001% {
+      right: -5%;
+      bottom: 3%;
+    }
+    80% {
+      bottom: 3%;
+    }
+    81% {
+      bottom: 4%;
+    }
+    82% {
+      bottom: 3%;
+    }
+    100% {
+      right: -5%;
+      bottom: 3%;
+    }
+  }
+  
