@@ -1,27 +1,28 @@
-'use client'
 // import MaxWidthWrapper from '@/components/MaxWidthWrapper'
-import React, { useState, useEffect } from 'react'
-import Header from '../../components/Navbar/Header'
-import Footer from '../../components/Footer/Footer'
-import Head from 'next/head'
-import Link from 'next/link'
-import ProgressBar from '../../components/Progressbar'
-// import Card from './Card'
-import MyForm from '../../components/MyForm'
-import Omsairam from '../../components/Navbar/Omsairam'
+import React from "react";
+import Header from "../../components/Navbar/Header";
+import Footer from "../../components/Footer/Footer";
+import Head from "next/head";
+import Link from "next/link";
+import ProgressBar from "../../components/Progressbar";
+import MyForm from "../../components/MyForm";
+import Omsairam from "../../components/Navbar/Omsairam";
 
-import Image from 'next/image'
+import Image from "next/image";
 
 const Card = ({ image, heading, description, link }) => (
   <Link href={link}>
     <div className="max-w-sm rounded overflow-hidden shadow-lg h-full">
-      {' '}
+      {" "}
       {/* Added 'h-full' to set a fixed height */}
-      <img
+      <Image
         className="w-full h-40 object-cover"
         src={image}
+        width={200}
+        height={100}
         alt="Card Image"
-      />{' '}
+        priority={true}
+      />
       {/* Set a fixed height for the image */}
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{heading}</div>
@@ -29,83 +30,77 @@ const Card = ({ image, heading, description, link }) => (
       </div>
     </div>
   </Link>
-)
+);
 const cardsData = [
   {
     image:
-      'https://api.designindianwardrobe.com/uploads/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india%20(7).jpg',
-    heading: 'Modular Interior Designs',
+      "https://api.designindianwardrobe.com/uploads/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india%20(7).jpg",
+    heading: "Modular Interior Designs",
     description:
-      'Best Modular Interior Designer in Delhi, Gurgaon, Noida India',
-    link: '/modular-interiors',
-  },
-  {
-    image: 'https://api.designindianwardrobe.com/uploads/3-bhk-flat-interior-apartment-design-in-delhi-gurgaon-noida-india%20(5).jpg',
-    heading: 'Interior Design Solutions',
-    description: 'Best Interior Designer in Delhi, Gurgaon, Noida India',
-    link: '/home-interior-designs',
+      "Best Modular Interior Designer in Delhi, Gurgaon, Noida India",
+    link: "/modular-interiors",
   },
   {
     image:
-      'https://api.designindianwardrobe.com/uploads/sofa-manufacturers-in-delhi-gurgaon-noida-india%20(1).jpg',
-    heading: 'End to End Interior',
+      "https://api.designindianwardrobe.com/uploads/3-bhk-flat-interior-apartment-design-in-delhi-gurgaon-noida-india%20(5).jpg",
+    heading: "Interior Design Solutions",
+    description: "Best Interior Designer in Delhi, Gurgaon, Noida India",
+    link: "/home-interior-designs",
+  },
+  {
+    image:
+      "https://api.designindianwardrobe.com/uploads/sofa-manufacturers-in-delhi-gurgaon-noida-india%20(1).jpg",
+    heading: "End to End Interior",
     description:
-      'Best End to End Interior Solutions in Delhi, Gurgaon, Noida India',
-    link: '/home-interior-services-india',
+      "Best End to End Interior Solutions in Delhi, Gurgaon, Noida India",
+    link: "/home-interior-services-india",
   },
   {
-    image: 'https://api.designindianwardrobe.com/uploads/top-architects-in-delhi-noida-gurgaon%20(3).jpg',
-    heading: 'Architectural Designs',
+    image:
+      "https://api.designindianwardrobe.com/uploads/top-architects-in-delhi-noida-gurgaon%20(3).jpg",
+    heading: "Architectural Designs",
     description:
-      'Best Architectural Designers Designer in Delhi, Gurgaon, Noida India',
-    link: '/architectural-designs-services-india',
-  },
-  {
-    image: 'https://api.designindianwardrobe.com/uploads/beautiful-lobby-area-design-ideas-in-delhi-gurgaon-noida-india%20(3).jpg',
-    heading: 'Selected Homes',
-    description: 'Best home designer in Delhi, Gurgaon, Noida India',
-    link: '/selected-homes-exclusive-interior-designs-india',
+      "Best Architectural Designers Designer in Delhi, Gurgaon, Noida India",
+    link: "/architectural-designs-services-india",
   },
   {
     image:
-      'https://api.designindianwardrobe.com/uploads/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes%20(1).jpg',
-    heading: 'Home Renovation Services',
-    description: 'Best Home Renovation Services in Delhi, Gurgaon, Noida India',
-    link: '/home-renovation-service',
+      "https://api.designindianwardrobe.com/uploads/beautiful-lobby-area-design-ideas-in-delhi-gurgaon-noida-india%20(3).jpg",
+    heading: "Selected Homes",
+    description: "Best home designer in Delhi, Gurgaon, Noida India",
+    link: "/selected-homes-exclusive-interior-designs-india",
   },
   {
     image:
-      'https://api.designindianwardrobe.com/uploads/bespoke-custom-modular-kitchen-designs-in-delhi-gurgaon-noida-india%20(3).jpg',
-    heading: 'Modular Kitchen',
-    description: 'Best Modular Kitchen Services in Delhi, Gurgaon, Noida India',
-    link: '/modular-kitchen-top-brand-india',
+      "https://api.designindianwardrobe.com/uploads/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes%20(1).jpg",
+    heading: "Home Renovation Services",
+    description: "Best Home Renovation Services in Delhi, Gurgaon, Noida India",
+    link: "/home-renovation-service",
   },
   {
     image:
-      'https://api.designindianwardrobe.com/uploads/2-door-sliding-wardrobe-designs-in-delhi-gurgaon-noida-india%20(2).jpg',
-    heading: 'Wardrobes',
-    description: 'Best Wardrobes Services in Delhi, Gurgaon, Noida India',
-    link: '/wardrobe-design-gallery-india',
+      "https://api.designindianwardrobe.com/uploads/bespoke-custom-modular-kitchen-designs-in-delhi-gurgaon-noida-india%20(3).jpg",
+    heading: "Modular Kitchen",
+    description: "Best Modular Kitchen Services in Delhi, Gurgaon, Noida India",
+    link: "/modular-kitchen-top-brand-india",
   },
-]
+  {
+    image:
+      "https://api.designindianwardrobe.com/uploads/2-door-sliding-wardrobe-designs-in-delhi-gurgaon-noida-india%20(2).jpg",
+    heading: "Wardrobes",
+    description: "Best Wardrobes Services in Delhi, Gurgaon, Noida India",
+    link: "/wardrobe-design-gallery-india",
+  },
+];
 
 const Page = ({}) => {
-  const [title, setTitle] = useState(
-    'Modular Interiors | Modular Kitchens & Wardrobe Brand India'
-  )
-
-  useEffect(() => {
-    // Update the document title on mount
-    document.title = title
-  }, [title])
-
   return (
     <>
       <ProgressBar />
       <Header />
       <Omsairam />
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <head>
+        <Head>
           <title>
             Modular Interiors | Modular Kitchens & Wardrobe Brand India
           </title>
@@ -153,11 +148,11 @@ const Page = ({}) => {
             property="og:description"
             content="Our brand is the largest manufacturers of modular interiors, we are top dealers for modular kitchens, wardrobes across Delhi, gurgaon, noida & India"
           />
-        </head>
+        </Head>
         <div className="p-4  ">
           <span className="text-green-500 text-sm">
             <Link href="/">Home</Link>
-          </span>{' '}
+          </span>
           / <span className="text-gray-600 text-sm">Design ideas</span>
         </div>
 
@@ -183,6 +178,6 @@ const Page = ({}) => {
 
       <Footer />
     </>
-  )
-}
-export default Page
+  );
+};
+export default Page;

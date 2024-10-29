@@ -590,6 +590,7 @@ const Header = () => {
             height={350}
             style={{ width: "550px", height: "350px", marginLeft: "120px" }}
             layout="fixed"
+            priority={true}
           />
 
           <div className="flex justify-center ml-40 mt-2">
@@ -656,6 +657,7 @@ const Header = () => {
                   width={100}
                   height={70}
                   className=" rounded-lg"
+                  priority={true}
                 />
 
                 <div>
@@ -680,6 +682,7 @@ const Header = () => {
                   width={100}
                   height={70}
                   className=" rounded-lg"
+                  priority={true}
                 />
 
                 <div>
@@ -787,6 +790,7 @@ const Header = () => {
             height={450}
             style={{ width: "750px", height: "350px" }}
             layout="fixed"
+            priority={true}
           />
 
           <div className="flex justify-center">
@@ -815,7 +819,6 @@ const Header = () => {
               Experts
             </p>
             <div className="flex flex-col gap-2 pt-4 pr-4">
-              {" "}
               <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
                 <Link href="/refer-and-get-rewards-interior-designers">
                   Refer for Rewards
@@ -838,7 +841,7 @@ const Header = () => {
                 <Link href="/luxury-residence-designs-delhi-india">
                   Luxury Interiors
                 </Link>
-              </button>{" "}
+              </button>
             </div>
           </div>
         </div>
@@ -853,6 +856,7 @@ const Header = () => {
                   width={100}
                   height={70}
                   className=" rounded-lg"
+
                 />
                 <div>
                   <Link href="/types-of-modular-kitchens">
@@ -880,7 +884,6 @@ const Header = () => {
                 />
                 <div>
                   <Link href="/modular-kitchen-top-brand-india/modular-kitchen-designs">
-                    {" "}
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage("modular")}
@@ -981,6 +984,7 @@ const Header = () => {
             height={450}
             style={{ width: "750px", height: "350px" }}
             layout="fixed"
+            priority={true}
           />
 
           <div className="flex justify-center">
@@ -1180,6 +1184,7 @@ const Header = () => {
             height={450}
             style={{ width: "750px", height: "350px" }}
             layout="fixed"
+            priority={true}
           />
           <div className="flex justify-center">
             <p className="text-lg font-bold mt-2">
@@ -1392,6 +1397,7 @@ const Header = () => {
             height={250}
             style={{ width: "550px", height: "250px" }}
             layout="fixed"
+            priority={true}
           />
           {/* <button className='mt-4 bg-green-400 p-3 ml-8 rounded-full text-white font-bold'>Book an Architectural Consultancy </button> */}
         </div>
@@ -1813,7 +1819,6 @@ const Header = () => {
                 />
                 <div>
                   <Link href="/homes-by-design-indian-homes">
-                    {" "}
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() =>
@@ -1843,6 +1848,7 @@ const Header = () => {
             height={450}
             style={{ width: '750px', height: '350px' }}
             layout="fixed"
+            priority={true}
           />
           <div className="flex justify-center">
             <p className="text-lg font-bold mt-2">
