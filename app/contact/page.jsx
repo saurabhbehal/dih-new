@@ -52,9 +52,11 @@ const TopFormSection = () => {
       );
       console.log("Uploading data...");
       const response = await fetch(
-        "https://m.designindianhomes.com/submitForm",
+        // "https://m.designindianhomes.com/submitForm",
+        "/api/submit-form",
         {
           method: "POST",
+          mode: "no-cors",
           body: formDataToSend,
         }
       );
@@ -205,6 +207,7 @@ const TopFormSection = () => {
               name="name"
               onChange={handleChange}
               className="mt-1 p-2 border-2 rounded-full w-full"
+              required
             />
             <label
               htmlFor="email"
@@ -218,6 +221,7 @@ const TopFormSection = () => {
               name="email"
               onChange={handleChange}
               className="mt-1 p-2 border-2 rounded-full w-full"
+              required
             />
             <label
               htmlFor="number"
@@ -231,6 +235,7 @@ const TopFormSection = () => {
               name="number"
               onChange={handleChange}
               className="mt-1 p-2 border-2 rounded-full w-full"
+              required
             />
             <label
               htmlFor="message"
@@ -243,6 +248,7 @@ const TopFormSection = () => {
               name="message"
               onChange={handleChange}
               className="mt-1 p-2 border-2 rounded-full w-full text-sm"
+              required
             ></textarea>
 
             {/* Add other form fields similarly */}
