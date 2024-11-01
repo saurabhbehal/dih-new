@@ -13,6 +13,11 @@ const transporter = nodemailer.createTransport({
     },
 });
 
+export async function GET(request) {
+
+    return NextResponse.json({ stauts: 'working' })
+}
+
 export async function POST(request) {
     const formData = await request.formData()
     const name = formData.get('name')
@@ -59,8 +64,17 @@ export async function POST(request) {
 
         console.log("Message sent: %s", info.messageId);
         // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
+        return info;
     }
-    main().catch(console.error);
+
+    try {
+        let res = (await main()).messageId
+        console.log("info: ", res)
+        return NextResponse.json({ name, email, message, number, id: res })
+
+    } catch (error) {
+        console.log(error)
+    }
 
     // console.log("Data: ", name, email, message, number)
     return NextResponse.json({ name, email, message, number })
