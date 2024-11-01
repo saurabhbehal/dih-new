@@ -30,39 +30,38 @@ export async function POST(request) {
             subject: "Contact Form Details :-", // Subject line
             text: "Hello world?", // plain text body
             // html: "<b>Hi Sahil,</b>", // html body
-            html: `<body>
-    <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-        <thead>
-            <tr style="background-color: #f2f2f2;">
-                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Name</th>
-                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${name}</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="border: 1px solid #dddddd; padding: 8px;">E-mail</td>
-                <td style="border: 1px solid #dddddd; padding: 8px;">${email}</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #dddddd; padding: 8px;">Message</td>
-                <td style="border: 1px solid #dddddd; padding: 8px;">${message}</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #dddddd; padding: 8px;">Contact</td>
-                <td style="border: 1px solid #dddddd; padding: 8px;">${number}</td>
-            </tr>
-        </tbody>
-    </table>
-</body>`, // html body
+            html: `
+            <body>
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <thead>
+                        <tr style="background-color: #f2f2f2;">
+                            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Name</th>
+                            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${name}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid #dddddd; padding: 8px;">E-mail</td>
+                            <td style="border: 1px solid #dddddd; padding: 8px;">${email}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #dddddd; padding: 8px;">Message</td>
+                            <td style="border: 1px solid #dddddd; padding: 8px;">${message}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #dddddd; padding: 8px;">Contact</td>
+                            <td style="border: 1px solid #dddddd; padding: 8px;">${number}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </body>`, // html body
         });
 
         console.log("Message sent: %s", info.messageId);
         // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
     }
-
     main().catch(console.error);
 
-
-    console.log("Data: ", name, email, message, number)
+    // console.log("Data: ", name, email, message, number)
     return NextResponse.json({ name, email, message, number })
 }
