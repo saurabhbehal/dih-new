@@ -17,6 +17,8 @@ import emailjs from "emailjs-com";
 import Omsairam from "../../components/Navbar/Omsairam";
 import ScheduleChatSection from "../../components/schedule-chat/page";
 import PopupForm from "../../components/popupform/page";
+
+
 const TopFormSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -53,14 +55,15 @@ const TopFormSection = () => {
       console.log("Uploading data...");
       const response = await fetch(
         // "https://m.designindianhomes.com/submitForm",
-        "/api/submit-form",
+        // "/api/submit-form",
+        "https://www.designindianhomes.com/api/submit-form",
         {
           method: "POST",
           mode: "no-cors",
           body: formDataToSend,
         }
       );
-
+      console.log("response: ", response);
       console.log("Response status:", response.status);
       console.log("Response headers:", response.headers);
       console.log("Response body:", await response.text());
@@ -95,6 +98,9 @@ const TopFormSection = () => {
     // Update the document title on mount
     document.title = title;
   }, [title]);
+
+
+
   return (
     <div className="flex flex-col md:flex-row my-12">
       <Head>
