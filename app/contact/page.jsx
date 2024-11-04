@@ -54,7 +54,6 @@ const TopFormSection = () => {
       );
       console.log("Uploading data...");
       const response = await fetch(
-        // "https://m.designindianhomes.com/submitForm",
         // "/api/submit-form",
         "https://www.designindianhomes.com/api/submit-form",
         {
